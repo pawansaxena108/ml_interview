@@ -11,3 +11,16 @@
 | **LinearDiscriminantAnalysis (LDA)** | Classification | No                                    | Assumes Gaussian distribution per class; analytical solution; good for small datasets; works well when class covariances are similar.                                      | `from sklearn.discriminant_analysis import LinearDiscriminantAnalysis`      |
 | **Perceptron**                       | Classification | Yes                                   | Simple linear classifier; works best with linearly separable data; fast but sensitive to noisy labels; can be seen as a precursor to modern neural networks.               | `from sklearn.linear_model import Perceptron`                               |
 | **SGDClassifier**                    | Classification | Yes                                   | Flexible linear classifier; can implement logistic regression, SVM (hinge loss), or perceptron; scalable to huge datasets; needs careful tuning of learning rate and loss. | `from sklearn.linear_model import SGDClassifier`                            |
+
+Linear model assumption
+
+| Model                          | Regression Assumptions Needed? | Notes                                                                                                                                          |
+| ------------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **LinearRegression**           | ✅ Yes                          | Standard OLS assumptions apply; violations can lead to biased or inefficient estimates.                                                        |
+| **Ridge / Lasso / ElasticNet** | ⚠ Partially                    | Regularization reduces sensitivity to multicollinearity, so strict independence is less critical. Still assumes linearity.                     |
+| **BayesianRidge**              | ⚠ Partially                    | Assumes linear relationship and Gaussian priors on coefficients; normality of errors is less strict.                                           |
+| **SGDRegressor**               | ⚠ Partially                    | Only assumes the model is linear; residual assumptions aren’t strictly required, mostly used for prediction.                                   |
+| **Polynomial Regression**      | ✅ Yes                          | After feature transformation, linearity is assumed in the coefficients; other regression assumptions still matter.                             |
+| **LogisticRegression**         | ❌ No                           | This is a classification model; doesn’t assume residual normality or homoscedasticity. Assumes **logit of probability is linear in features**. |
+| **LinearDiscriminantAnalysis** | ❌ No (different assumptions)   | Assumes features are Gaussian within each class and covariances are similar. Linear regression assumptions are not needed.                     |
+| **Perceptron / SGDClassifier** | ❌ No                           | Linear classifier; only assumes the classes are linearly separable (or approximately so). No assumptions about residuals or homoscedasticity.  |
