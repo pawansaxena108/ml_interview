@@ -1,24 +1,13 @@
-regression models
-
-| Model                 | Regularization             | Notes                       |
-| --------------------- | -------------------------- | --------------------------- |
-| LinearRegression      | None                       | Standard OLS                |
-| Ridge                 | L2                         | Prevents large coefficients |
-| Lasso                 | L1                         | Feature selection           |
-| ElasticNet            | L1 + L2                    | Hybrid of Ridge & Lasso     |
-| BayesianRidge         | Probabilistic              | Uncertainty estimation      |
-| SGDRegressor          | L1, L2, ElasticNet         | Scalable for large data     |
-| Polynomial Regression | None (feature engineering) | Captures non-linear trends  |
-
-
-Uses Gradidnet descent?
-
-| Model                 | Uses Gradient Descent? | Notes                                       |
-| --------------------- | ---------------------- | ------------------------------------------- |
-| LinearRegression      | No                     | Analytical solution                         |
-| Ridge                 | Usually no             | Can use iterative solver for large datasets |
-| Lasso                 | Yes                    | Iterative (coordinate descent)              |
-| ElasticNet            | Yes                    | Iterative (coordinate descent)              |
-| BayesianRidge         | No                     | Bayesian posterior computation              |
-| SGDRegressor          | Yes                    | Stochastic gradient descent                 |
-| Polynomial Regression | Depends on base model  | Usually LinearRegression → no               |
+| Model                                | Task           | Uses Gradient Descent?                | Notes / When to Use                                                                                                                                                        | sklearn Implementation                                                      |
+| ------------------------------------ | -------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **LinearRegression**                 | Regression     | No                                    | Standard OLS; fast for small/medium datasets; sensitive to multicollinearity; no regularization.                                                                           | `from sklearn.linear_model import LinearRegression`                         |
+| **Ridge**                            | Regression     | Usually no (can use iterative solver) | L2 regularization; helps with multicollinearity and overfitting; use for datasets with many correlated features.                                                           | `from sklearn.linear_model import Ridge`                                    |
+| **Lasso**                            | Regression     | Yes                                   | L1 regularization; feature selection; good when many features may be irrelevant; can shrink coefficients to 0.                                                             | `from sklearn.linear_model import Lasso`                                    |
+| **ElasticNet**                       | Regression     | Yes                                   | Hybrid L1 + L2; use when you want both feature selection and regularization; tune `l1_ratio` for balance.                                                                  | `from sklearn.linear_model import ElasticNet`                               |
+| **BayesianRidge**                    | Regression     | No                                    | Probabilistic regression; provides uncertainty estimates; useful in Bayesian modeling contexts.                                                                            | `from sklearn.linear_model import BayesianRidge`                            |
+| **SGDRegressor**                     | Regression     | Yes                                   | Gradient-based, scalable to very large datasets; supports L1, L2, or ElasticNet regularization; may need careful learning rate tuning.                                     | `from sklearn.linear_model import SGDRegressor`                             |
+| **Polynomial Regression**            | Regression     | Depends on base model                 | Captures non-linear relationships by transforming features; still linear in coefficients; combine with `LinearRegression`.                                                 | `from sklearn.preprocessing import PolynomialFeatures` + `LinearRegression` |
+| **LogisticRegression**               | Classification | Yes (or solver-specific)              | Binary/multiclass classification; predicts probabilities; use for linearly separable classes or as baseline; solver choice affects speed & scalability.                    | `from sklearn.linear_model import LogisticRegression`                       |
+| **LinearDiscriminantAnalysis (LDA)** | Classification | No                                    | Assumes Gaussian distribution per class; analytical solution; good for small datasets; works well when class covariances are similar.                                      | `from sklearn.discriminant_analysis import LinearDiscriminantAnalysis`      |
+| **Perceptron**                       | Classification | Yes                                   | Simple linear classifier; works best with linearly separable data; fast but sensitive to noisy labels; can be seen as a precursor to modern neural networks.               | `from sklearn.linear_model import Perceptron`                               |
+| **SGDClassifier**                    | Classification | Yes                                   | Flexible linear classifier; can implement logistic regression, SVM (hinge loss), or perceptron; scalable to huge datasets; needs careful tuning of learning rate and loss. | `from sklearn.linear_model import SGDClassifier`                            |
