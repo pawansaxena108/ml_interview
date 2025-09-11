@@ -1,4 +1,4 @@
-'''import numpy as np
+import numpy as np
 import matplotlib.pyplot as plt
 
 # -------------------------------
@@ -53,11 +53,11 @@ plt.ylabel("Frequency")
 plt.legend()
 plt.grid(True, linestyle="--", alpha=0.6)
 plt.show()
-'''
 
 
-🔎 What this does
-Generates 10,000 possible business outcomes (revenue totals).
-Gives you the expected revenue and uncertainty range.
-Plots the distribution so you can see how likely different revenue levels are.
+
+# 🔎 What this does
+# Generates 10,000 possible business outcomes (revenue totals).
+# Gives you the expected revenue and uncertainty range.
+# Plots the distribution so you can see how likely different revenue levels are.
 
