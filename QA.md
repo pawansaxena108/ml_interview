@@ -49,10 +49,71 @@ Choose the scaler based on data distribution, presence of outliers, and requirem
 
 
 
-Example: SS 1/23 Key Terms to Remember
-Governance & accountability – board ownership, senior management responsibility.
-Model lifecycle – development, implementation, use, monitoring, retirement.
-Independent validation – objective review separate from development.
-Monitoring & backtesting – performance tracking, recalibration.
-Scope – applies to all models (financial, AI/ML, forecasting).
-Model risk as a risk type – treated like credit, market, liquidity.
+
+
+
+
+Perfect! Here’s a **concise markdown cheat-sheet** covering all the main concepts you mentioned. You can use it to quickly recall **keywords and key points** in an interview:
+
+---
+
+## **Risk Types & Key Terms**
+
+### **1. Credit Risk**
+
+* **Definition:** Risk of counterparty default.
+* **Key Terms:** Probability of Default (PD), Loss Given Default (LGD), Exposure at Default (EAD), Collateral, Credit Limits, Diversification.
+* **Interview Memory Aid:** *“Default probability, loss, exposure, limits, collateral.”*
+
+### **2. Market Risk**
+
+* **Definition:** Risk of losses due to market movements (prices, rates, FX).
+* **Key Terms:** Value-at-Risk (VaR), Stress Testing, Sensitivity Analysis (Delta, Beta), Hedging, Diversification, Position Limits.
+* **Interview Memory Aid:** *“VaR, stress test, delta/beta, hedge, limits.”*
+
+### **3. Liquidity Risk**
+
+* **Definition:** Risk of being unable to meet short-term obligations without loss.
+* **Key Terms:** Liquidity Coverage Ratio (LCR), Net Stable Funding Ratio (NSFR), Cash Buffers, Contingency Funding Plan, Diversified Funding.
+* **Interview Memory Aid:** *“Cash buffer, LCR, NSFR, contingency, diversification.”*
+
+---
+
+## **Risk Measurement & Techniques**
+
+### **1. Value-at-Risk (VaR)**
+
+* **Definition:** Maximum potential loss over a time horizon at a given confidence level.
+* **Key Terms:** Confidence Level (95%, 99%), Time Horizon, Quantile, Historical Simulation, Parametric (Variance-Covariance), Monte Carlo.
+
+### **2. Stress Testing**
+
+* **Definition:** Evaluate portfolio under extreme or crisis scenarios.
+* **Key Terms:** Historical Scenario, Hypothetical Scenario, Tail Risk, Sensitivity Analysis.
+
+### **3. Monte Carlo Simulation**
+
+* **Definition:** Simulate many random input scenarios to approximate output distribution.
+* **Key Terms:** Input Distribution, Random Sampling, Model / Valuation Function, Output Distribution, Extreme Values, Convergence, Variance Reduction (Antithetic, Control Variates).
+* **Interview Memory Aid:** *“Sample inputs → run model → collect outputs → estimate tail risk.”*
+
+---
+
+## **Regulatory & Model Risk**
+
+### **SS 1/23 – Key Terms**
+
+* **Governance & accountability** – board and senior management responsibility.
+* **Model lifecycle** – development, implementation, use, monitoring, retirement.
+* **Independent validation** – objective review separate from development.
+* **Monitoring & backtesting** – performance tracking, recalibration.
+* **Scope** – applies to all models (financial, AI/ML, forecasting).
+* **Model risk as a risk type** – treated like credit, market, liquidity risk.
+* **Interview Memory Aid:** *“Governance, Lifecycle, Validation, Monitoring, Scope, Risk Type.”*
+
+---
+
+✅ **Tip:** Use **keywords first**, expand only if asked. This shows **awareness and structured thinking** without reciting long paragraphs.
+
+---
+
