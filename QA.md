@@ -1,3 +1,5 @@
+
+
 1) Scaling tecnique
 
 Different scalers in machine learning include **MinMaxScaler, StandardScaler, RobustScaler, and Normalizer**, each suited for specific data characteristics and modeling goals.[1][2][3]
@@ -43,3 +45,14 @@ Choose the scaler based on data distribution, presence of outliers, and requirem
 | **Credit Risk**    | Risk of loss if a borrower or counterparty fails to meet obligations     | Default on loans, bonds, derivatives; counterparty failure                                    | - Probability of Default (PD)<br>- Loss Given Default (LGD)<br>- Exposure at Default (EAD)<br>- Credit VaR | - Credit limits & approval processes<br>- Collateral & guarantees<br>- Diversification of counterparties      | *“Credit risk is about counterparty default and the potential financial loss if obligations aren’t met.”* |
 | **Market Risk**    | Risk of losses due to changes in market prices or rates                  | Interest rate changes, stock price volatility, currency fluctuations, commodity price changes | - Value-at-Risk (VaR)<br>- Stress Testing / Scenario Analysis<br>- Sensitivity analysis (Delta, Beta)      | - Hedging with derivatives<br>- Position limits & diversification<br>- Continuous monitoring & risk reporting | *“Market risk is about potential losses from market movements, measured with VaR and stress testing.”*    |
 | **Liquidity Risk** | Risk of being unable to meet short-term obligations without large losses | Inability to sell assets quickly, funding shortages                                           | - Liquidity Coverage Ratio (LCR)<br>- Net Stable Funding Ratio (NSFR)<br>- Cash flow forecasts             | - Maintain cash buffers<br>- Contingency funding plans<br>- Diversify funding sources                         | *“Liquidity risk is about not having enough cash or marketable assets to meet obligations promptly.”*     |
+
+
+
+
+Example: SS 1/23 Key Terms to Remember
+Governance & accountability – board ownership, senior management responsibility.
+Model lifecycle – development, implementation, use, monitoring, retirement.
+Independent validation – objective review separate from development.
+Monitoring & backtesting – performance tracking, recalibration.
+Scope – applies to all models (financial, AI/ML, forecasting).
+Model risk as a risk type – treated like credit, market, liquidity.
