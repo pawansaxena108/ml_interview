@@ -1,6 +1,3 @@
-Got it! Let’s add **specific high-impact features from your sensitivity analysis** and **interesting outcomes from stress testing** to make your STAR answer more concrete and impressive. Here’s a refined version:
-
----
 
 **Situation:**
 At the account level, the operations team noticed inefficiencies in crew standby planning—last-minute changes and flight delays were increasing costs and operational disruptions.
